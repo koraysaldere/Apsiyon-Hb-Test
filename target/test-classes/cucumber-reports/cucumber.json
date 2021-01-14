@@ -1,0 +1,666 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3225970500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I go to https://www.hepsiburada.com page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.hepsiburada.com",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.GoToURL(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 15817400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I url must be https://www.hepsiburada.com/",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.hepsiburada.com/",
+                  "offset": 14
+                }
+              ],
+              "location": "WebStep.CheckUrl(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 195920800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I move mouse reset position",
+            "match": {
+              "location": "WebStep.ResetMousePosition()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 268580500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I mouse over myAccount element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "myAccount",
+                  "offset": 13
+                }
+              ],
+              "location": "WebStep.MouseOver(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2111395500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click mainLogin element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "mainLogin",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.Click(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13503591400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I login with",
+            "match": {
+              "location": "WebStep.login(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "test24950@gmail.com",
+                  "123456Qq"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "login",
+                  ""
+                ],
+                "line": 12
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 73133100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I see myAccount element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "myAccount",
+                  "offset": 6
+                }
+              ],
+              "location": "WebStep.seeElement(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15505326100,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 14,
+                "value": "###"
+              }
+            ],
+            "line": 15,
+            "name": "I click popupClose element if exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "popupClose",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.ClickElementExist(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 174789500,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 16,
+                "value": "###"
+              }
+            ],
+            "line": 17,
+            "name": "I mouse over myAccount element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "myAccount",
+                  "offset": 13
+                }
+              ],
+              "location": "WebStep.MouseOver(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3117140700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I click myFavorite element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "myFavorite",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.Click(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 54372700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I see myFavoritePageTitle element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "myFavoritePageTitle",
+                  "offset": 6
+                }
+              ],
+              "location": "WebStep.seeElement(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15428844500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I click selectAllFavItem element if exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "selectAllFavItem",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.ClickElementExist(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 15365374900,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I click deleteSelectedFav element if exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "deleteSelectedFav",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.ClickElementExist(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15349681600,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I click confirmDeleteButton element if exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "confirmDeleteButton",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.ClickElementExist(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2928603200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I click HepsiburadaMainTitle element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "HepsiburadaMainTitle",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.Click(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 48849200,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I url must be https://www.hepsiburada.com/",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.hepsiburada.com/",
+                  "offset": 14
+                }
+              ],
+              "location": "WebStep.CheckUrl(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4140479200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.runWithChrome()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Hepsiburada search with samsung keyword product and add / remove product my favorite",
+        "description": "",
+        "id": "hepsiburada-add-/-remove-product-my-favorite;hepsiburada-search-with-samsung-keyword-product-and-add-/-remove-product-my-favorite",
+        "after": [
+          {
+            "result": {
+              "duration": 811785700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDownChrome(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1245633100,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I write text samsung text area searchBar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "samsung",
+                  "offset": 13
+                },
+                {
+                  "val": "searchBar",
+                  "offset": 31
+                }
+              ],
+              "location": "WebStep.SendKeys(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 822667800,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I click searchButton element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "searchButton",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.Click(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10153775000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I click 3rdPage element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3rdPage",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.Click(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 513631400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I see samsungPageTitle element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "samsungPageTitle",
+                  "offset": 6
+                }
+              ],
+              "location": "WebStep.seeElement(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 72893700,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I get 3rdProductTitle element text and keep temp variable",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3rdProductTitle",
+                  "offset": 6
+                }
+              ],
+              "location": "WebStep.getElementText(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 215678300,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I mouse over 3rdProduct element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3rdProduct",
+                  "offset": 13
+                }
+              ],
+              "location": "WebStep.MouseOver(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 136828800,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I click 3rdProductFavIcon element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3rdProductFavIcon",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.Click(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 249536300,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I mouse over myAccount element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "myAccount",
+                  "offset": 13
+                }
+              ],
+              "location": "WebStep.MouseOver(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2232162000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I click myFavorite element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "myFavorite",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.Click(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 49979900,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "I see myFavoritePageTitle element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "myFavoritePageTitle",
+                  "offset": 6
+                }
+              ],
+              "location": "WebStep.seeElement(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 81538800,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "I compare 3rdFavoriteTitle text with temp variable text",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3rdFavoriteTitle",
+                  "offset": 10
+                }
+              ],
+              "location": "WebStep.getElementTextCompareTemp(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 159583300,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "I click selectAllFavItem element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "selectAllFavItem",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.Click(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 307475400,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I click deleteSelectedFav element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "deleteSelectedFav",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.Click(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 88649200,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "I click confirmDeleteButton element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "confirmDeleteButton",
+                  "offset": 8
+                }
+              ],
+              "location": "WebStep.Click(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15372567600,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "I see deleteConfirmationMessage element",
+            "match": {
+              "arguments": [
+                {
+                  "val": "deleteConfirmationMessage",
+                  "offset": 6
+                }
+              ],
+              "location": "WebStep.seeElement(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10001639800,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "I wait 10 second",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 7
+                }
+              ],
+              "location": "WebStep.WaitTime(int)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 26,
+            "name": "@Run"
+          },
+          {
+            "line": 26,
+            "name": "@Chrome"
+          }
+        ]
+      }
+    ],
+    "name": "Hepsiburada add / remove product my favorite",
+    "description": "",
+    "id": "hepsiburada-add-/-remove-product-my-favorite",
+    "keyword": "Feature",
+    "uri": "TestCase.feature"
+  }
+]

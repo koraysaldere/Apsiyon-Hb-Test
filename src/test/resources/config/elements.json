@@ -1,0 +1,25 @@
+{
+  "HepsiburadaMainTitle": "//a[@title='Hepsiburada']",
+  "popupClose": "//div[contains(@class,'close')]",
+  "loginIcon": "//div[@class='link account-user']",
+  "myAccount": "#myAccount",
+  "mainLogin": "#login",
+  "username": "#txtUserName",
+  "password": "#txtPassword",
+  "login": "#btnLogin",
+  "searchBar": "//input[@class='desktopOldAutosuggestTheme-input']",
+  "searchButton": "//div[@class='SearchBoxOld-buttonContainer']",
+  "3rdPage": "//a[@class='page-3 ']",
+  "samsungPageTitle": "//div[@class='category-suggestion-title']//h1[text()='samsung']",
+  "3rdProductTitle": "//div[@class='desktop widget SearchListing']//a[@data-position='3']//h3",
+  "3rdProduct": "(//div[@class='box product'])[3]",
+  "3rdProductFavIcon": "//div[@class='box product']//div[@data-position='3']",
+  "myFavorite": "//a[@title='Beğendiklerim']",
+  "myFavoritePageTitle": "//h1[text()='Beğendiklerim']",
+  "3rdFavoriteTitle": "//div[@class='product-item '][1]//div[contains(@id,'Title')]",
+  "selectAllFavItem": "#StickActionHeader-SelectAll",
+  "deleteSelectedFav": "#StickActionHeader-RemoveSelected",
+  "confirmDeleteButton": "#DeleteConfirmationModal-ActionButton",
+  "deleteConfirmationMessage": "//*[text()='Ürün listenizden silindi']"
+}
+
