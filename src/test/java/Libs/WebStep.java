@@ -32,6 +32,7 @@ public class WebStep {
         robot.mouseMove(x, y);
     }
 
+
     @Given("^I? go to ([^\"]*) page$")
     public static void GoToURL(String url) throws MalformedURLException {
         WebLibrary.gotoURL(url);
