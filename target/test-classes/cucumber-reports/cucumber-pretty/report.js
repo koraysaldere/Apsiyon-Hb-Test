@@ -1,13 +1,13 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("TestCase.feature");
 formatter.feature({
   "line": 1,
-  "name": "Hepsiburada add / remove product my favorite",
+  "name": "Hepsiburada add and delete product my favorite",
   "description": "",
-  "id": "hepsiburada-add-/-remove-product-my-favorite",
+  "id": "hepsiburada-add-and-delete-product-my-favorite",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 4140479200,
+  "duration": 4233721800,
   "status": "passed"
 });
 formatter.background({
@@ -76,59 +76,85 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "comments": [
-    {
-      "line": 14,
-      "value": "###"
-    }
-  ],
-  "line": 15,
+  "line": 14,
   "name": "I click popupClose element if exist",
   "keyword": "When "
 });
 formatter.step({
   "comments": [
     {
+      "line": 15,
+      "value": "# !!! if exist ile biten stepler elementler eğer element display olmadı ise timeout süresince beklemektedir."
+    },
+    {
       "line": 16,
-      "value": "###"
+      "value": "# testlerin koşması sırasında element ekrana hiç gelmedi ise timeout sürelerinden kaynaklı testlerin süresinin uzun olduğu düşünlebilir."
+    },
+    {
+      "line": 17,
+      "value": "# burada öncelik testin doğru ve sağlıklı bir şekilde çalışması olduğundan senaryo performans kriterlerine göre dizayn edilmemiştir."
+    },
+    {
+      "line": 19,
+      "value": "# Sepet Kontrolü"
+    },
+    {
+      "line": 20,
+      "value": "# !!! Test çalışması sırasında testin fail etmesi yarıda kesilmesi veya olumsuz bir durumla sonuçlanması durumnda ürün sepetten silinmeden çıkabilir.Scenario:"
+    },
+    {
+      "line": 21,
+      "value": "# Bir sonraki testin çalışması sırasında ürün favarilerden çıkarılmadığından aynı ürün eklenmek istendiğinde bu favarilerde ise test birkez daha fail edecektir.Scenario:"
+    },
+    {
+      "line": 22,
+      "value": "# Login işlemi gerçekleştirildikten sonra favorileri kontrol edip eğer ürün varsa silerek clean bir şekilde teste başlamak daha sağlıklı olduğundan bu admları Backgroundda her test çalışması sırasında kontrol ediyorum."
+    },
+    {
+      "line": 23,
+      "value": "# Clean test mantığnı gözeterek çeşitli yöntemler kullanılabilir."
+    },
+    {
+      "line": 24,
+      "value": "# Cashin temizlenmesi incongito modda tarayıcıyı başlatma vs. fakat otomasyon kütüphanesine uygunluğundan kaynaklı olarak bu yöntem ile ilerledim, diğer bahsettiğim yöntemler ve buna benzer bir çok yöntemde kullanılabilir."
     }
   ],
-  "line": 17,
+  "line": 25,
   "name": "I mouse over myAccount element",
   "keyword": "When "
 });
 formatter.step({
-  "line": 18,
+  "line": 26,
   "name": "I click myFavorite element",
   "keyword": "And "
 });
 formatter.step({
-  "line": 19,
+  "line": 27,
   "name": "I see myFavoritePageTitle element",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 20,
+  "line": 28,
   "name": "I click selectAllFavItem element if exist",
   "keyword": "When "
 });
 formatter.step({
-  "line": 21,
+  "line": 29,
   "name": "I click deleteSelectedFav element if exist",
   "keyword": "And "
 });
 formatter.step({
-  "line": 22,
+  "line": 30,
   "name": "I click confirmDeleteButton element if exist",
   "keyword": "And "
 });
 formatter.step({
-  "line": 23,
+  "line": 31,
   "name": "I click HepsiburadaMainTitle element",
   "keyword": "When "
 });
 formatter.step({
-  "line": 24,
+  "line": 32,
   "name": "I url must be https://www.hepsiburada.com/",
   "keyword": "Then "
 });
@@ -142,7 +168,7 @@ formatter.match({
   "location": "WebStep.GoToURL(String)"
 });
 formatter.result({
-  "duration": 3225970500,
+  "duration": 3697653000,
   "status": "passed"
 });
 formatter.match({
@@ -155,14 +181,14 @@ formatter.match({
   "location": "WebStep.CheckUrl(String)"
 });
 formatter.result({
-  "duration": 15817400,
+  "duration": 14681000,
   "status": "passed"
 });
 formatter.match({
   "location": "WebStep.ResetMousePosition()"
 });
 formatter.result({
-  "duration": 195920800,
+  "duration": 200789300,
   "status": "passed"
 });
 formatter.match({
@@ -175,7 +201,7 @@ formatter.match({
   "location": "WebStep.MouseOver(String)"
 });
 formatter.result({
-  "duration": 268580500,
+  "duration": 442170400,
   "status": "passed"
 });
 formatter.match({
@@ -188,14 +214,14 @@ formatter.match({
   "location": "WebStep.Click(String)"
 });
 formatter.result({
-  "duration": 2111395500,
+  "duration": 1612850100,
   "status": "passed"
 });
 formatter.match({
   "location": "WebStep.login(DataTable)"
 });
 formatter.result({
-  "duration": 13503591400,
+  "duration": 3781408000,
   "status": "passed"
 });
 formatter.match({
@@ -208,7 +234,7 @@ formatter.match({
   "location": "WebStep.seeElement(String)"
 });
 formatter.result({
-  "duration": 73133100,
+  "duration": 5179935800,
   "status": "passed"
 });
 formatter.match({
@@ -221,7 +247,7 @@ formatter.match({
   "location": "WebStep.ClickElementExist(String)"
 });
 formatter.result({
-  "duration": 15505326100,
+  "duration": 15504251600,
   "status": "passed"
 });
 formatter.match({
@@ -234,7 +260,7 @@ formatter.match({
   "location": "WebStep.MouseOver(String)"
 });
 formatter.result({
-  "duration": 174789500,
+  "duration": 168476700,
   "status": "passed"
 });
 formatter.match({
@@ -247,7 +273,7 @@ formatter.match({
   "location": "WebStep.Click(String)"
 });
 formatter.result({
-  "duration": 3117140700,
+  "duration": 3356974400,
   "status": "passed"
 });
 formatter.match({
@@ -260,7 +286,7 @@ formatter.match({
   "location": "WebStep.seeElement(String)"
 });
 formatter.result({
-  "duration": 54372700,
+  "duration": 56147500,
   "status": "passed"
 });
 formatter.match({
@@ -273,7 +299,7 @@ formatter.match({
   "location": "WebStep.ClickElementExist(String)"
 });
 formatter.result({
-  "duration": 15428844500,
+  "duration": 15362680500,
   "status": "passed"
 });
 formatter.match({
@@ -286,7 +312,7 @@ formatter.match({
   "location": "WebStep.ClickElementExist(String)"
 });
 formatter.result({
-  "duration": 15365374900,
+  "duration": 15353389600,
   "status": "passed"
 });
 formatter.match({
@@ -299,7 +325,7 @@ formatter.match({
   "location": "WebStep.ClickElementExist(String)"
 });
 formatter.result({
-  "duration": 15349681600,
+  "duration": 15346283500,
   "status": "passed"
 });
 formatter.match({
@@ -312,7 +338,7 @@ formatter.match({
   "location": "WebStep.Click(String)"
 });
 formatter.result({
-  "duration": 2928603200,
+  "duration": 3275071300,
   "status": "passed"
 });
 formatter.match({
@@ -325,106 +351,101 @@ formatter.match({
   "location": "WebStep.CheckUrl(String)"
 });
 formatter.result({
-  "duration": 48849200,
+  "duration": 46172500,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 27,
-  "name": "Hepsiburada search with samsung keyword product and add / remove product my favorite",
+  "line": 35,
+  "name": "Hepsiburada search the samsung brand product with using search bar and add product my favorite",
   "description": "",
-  "id": "hepsiburada-add-/-remove-product-my-favorite;hepsiburada-search-with-samsung-keyword-product-and-add-/-remove-product-my-favorite",
+  "id": "hepsiburada-add-and-delete-product-my-favorite;hepsiburada-search-the-samsung-brand-product-with-using-search-bar-and-add-product-my-favorite",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 26,
+      "line": 34,
       "name": "@Run"
     },
     {
-      "line": 26,
+      "line": 34,
       "name": "@Chrome"
     }
   ]
 });
 formatter.step({
-  "line": 28,
+  "line": 36,
   "name": "I write text samsung text area searchBar",
   "keyword": "When "
 });
 formatter.step({
-  "line": 29,
+  "line": 37,
   "name": "I click searchButton element",
   "keyword": "And "
 });
 formatter.step({
-  "line": 30,
+  "line": 38,
   "name": "I click 3rdPage element",
   "keyword": "When "
 });
 formatter.step({
-  "line": 31,
+  "line": 39,
   "name": "I see samsungPageTitle element",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 32,
+  "line": 40,
   "name": "I get 3rdProductTitle element text and keep temp variable",
   "keyword": "And "
 });
 formatter.step({
-  "line": 33,
+  "line": 41,
   "name": "I mouse over 3rdProduct element",
   "keyword": "And "
 });
 formatter.step({
-  "line": 34,
+  "line": 42,
   "name": "I click 3rdProductFavIcon element",
   "keyword": "And "
 });
 formatter.step({
-  "line": 35,
+  "line": 43,
   "name": "I mouse over myAccount element",
   "keyword": "When "
 });
 formatter.step({
-  "line": 36,
+  "line": 44,
   "name": "I click myFavorite element",
   "keyword": "And "
 });
 formatter.step({
-  "line": 37,
+  "line": 45,
   "name": "I see myFavoritePageTitle element",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 38,
+  "line": 46,
   "name": "I compare 3rdFavoriteTitle text with temp variable text",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 39,
+  "line": 47,
   "name": "I click selectAllFavItem element",
   "keyword": "When "
 });
 formatter.step({
-  "line": 40,
+  "line": 48,
   "name": "I click deleteSelectedFav element",
   "keyword": "And "
 });
 formatter.step({
-  "line": 41,
+  "line": 49,
   "name": "I click confirmDeleteButton element",
   "keyword": "And "
 });
 formatter.step({
-  "line": 42,
+  "line": 50,
   "name": "I see deleteConfirmationMessage element",
   "keyword": "Then "
-});
-formatter.step({
-  "line": 43,
-  "name": "I wait 10 second",
-  "keyword": "And "
 });
 formatter.match({
   "arguments": [
@@ -440,7 +461,7 @@ formatter.match({
   "location": "WebStep.SendKeys(String,String)"
 });
 formatter.result({
-  "duration": 1245633100,
+  "duration": 660310700,
   "status": "passed"
 });
 formatter.match({
@@ -453,7 +474,7 @@ formatter.match({
   "location": "WebStep.Click(String)"
 });
 formatter.result({
-  "duration": 822667800,
+  "duration": 1340661400,
   "status": "passed"
 });
 formatter.match({
@@ -466,7 +487,7 @@ formatter.match({
   "location": "WebStep.Click(String)"
 });
 formatter.result({
-  "duration": 10153775000,
+  "duration": 14727817500,
   "status": "passed"
 });
 formatter.match({
@@ -479,7 +500,7 @@ formatter.match({
   "location": "WebStep.seeElement(String)"
 });
 formatter.result({
-  "duration": 513631400,
+  "duration": 426957500,
   "status": "passed"
 });
 formatter.match({
@@ -492,7 +513,7 @@ formatter.match({
   "location": "WebStep.getElementText(String)"
 });
 formatter.result({
-  "duration": 72893700,
+  "duration": 70129400,
   "status": "passed"
 });
 formatter.match({
@@ -505,7 +526,7 @@ formatter.match({
   "location": "WebStep.MouseOver(String)"
 });
 formatter.result({
-  "duration": 215678300,
+  "duration": 207673100,
   "status": "passed"
 });
 formatter.match({
@@ -518,7 +539,7 @@ formatter.match({
   "location": "WebStep.Click(String)"
 });
 formatter.result({
-  "duration": 136828800,
+  "duration": 151174100,
   "status": "passed"
 });
 formatter.match({
@@ -531,7 +552,7 @@ formatter.match({
   "location": "WebStep.MouseOver(String)"
 });
 formatter.result({
-  "duration": 249536300,
+  "duration": 281515400,
   "status": "passed"
 });
 formatter.match({
@@ -544,7 +565,7 @@ formatter.match({
   "location": "WebStep.Click(String)"
 });
 formatter.result({
-  "duration": 2232162000,
+  "duration": 2038579700,
   "status": "passed"
 });
 formatter.match({
@@ -557,7 +578,7 @@ formatter.match({
   "location": "WebStep.seeElement(String)"
 });
 formatter.result({
-  "duration": 49979900,
+  "duration": 73227900,
   "status": "passed"
 });
 formatter.match({
@@ -570,7 +591,7 @@ formatter.match({
   "location": "WebStep.getElementTextCompareTemp(String)"
 });
 formatter.result({
-  "duration": 81538800,
+  "duration": 63000600,
   "status": "passed"
 });
 formatter.match({
@@ -583,7 +604,7 @@ formatter.match({
   "location": "WebStep.Click(String)"
 });
 formatter.result({
-  "duration": 159583300,
+  "duration": 175931100,
   "status": "passed"
 });
 formatter.match({
@@ -596,7 +617,7 @@ formatter.match({
   "location": "WebStep.Click(String)"
 });
 formatter.result({
-  "duration": 307475400,
+  "duration": 140633900,
   "status": "passed"
 });
 formatter.match({
@@ -609,7 +630,7 @@ formatter.match({
   "location": "WebStep.Click(String)"
 });
 formatter.result({
-  "duration": 88649200,
+  "duration": 101909200,
   "status": "passed"
 });
 formatter.match({
@@ -622,24 +643,11 @@ formatter.match({
   "location": "WebStep.seeElement(String)"
 });
 formatter.result({
-  "duration": 15372567600,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "10",
-      "offset": 7
-    }
-  ],
-  "location": "WebStep.WaitTime(int)"
-});
-formatter.result({
-  "duration": 10001639800,
+  "duration": 15392870500,
   "status": "passed"
 });
 formatter.after({
-  "duration": 811785700,
+  "duration": 823213300,
   "status": "passed"
 });
 });

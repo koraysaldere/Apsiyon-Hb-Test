@@ -39,6 +39,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -52,7 +53,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Jan 14, 2021 04:13:25 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Feb 12, 2021 10:59:57 AM</span>
 				</a>
 			</li>
 			<li>
@@ -78,6 +79,8 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -139,10 +142,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -154,10 +157,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -169,10 +172,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>31</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='70.968%'><span class='strong'>22</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='3.226%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='25.806%'>8</span> others
 				</div>
 			</div>
 		</div>
@@ -186,19 +189,19 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Hepsiburada add and delete product my favorite</span>
-						<span class='test-time'>Jan 14, 2021 04:13:26 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Feb 12, 2021 10:59:57 AM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenario node' test-id='2' status='pass'>
+<div class='scenario node' test-id='2' status='fail'>
 	<div class='category-list'>
 		<span class='category label white-text'>@Run</span>
 		<span class='category label white-text'>@Chrome</span>
 	</div>
-	<span class='duration right label'>0h 2m 3s+613ms</span>
+	<span class='duration right label'>0h 2m 0s+547ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Hepsiburada search the samsung brand product with using search bar and add product my favorite</span>
@@ -381,76 +384,83 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='25' class='node and pass' status='pass'>
+		<li test-id='25' class='node and fail' status='fail'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And I click 3rdProductFavIcon element</span>
-				<div class='pre'>passed</div>
+				<div class='pre'><pre>java.lang.AssertionError: Element not found. Element is null
+	at org.testng.Assert.fail(Assert.java:94)
+	at Libs.WebStep.Click(WebStep.java:48)
+	at ✽.And I click 3rdProductFavIcon element(TestCase.feature:32)
+</pre></div>
 			
 		</li>
-		<li test-id='26' class='node when pass' status='pass'>
+		<li test-id='26' class='node when skip' status='skip'>
 			
 			<b>When</b>
 			
 			<span class="bdd-step-name">When I mouse over myAccount element</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='27' class='node and pass' status='pass'>
+		<li test-id='27' class='node and skip' status='skip'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And I click myFavorite element</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='28' class='node then pass' status='pass'>
+		<li test-id='28' class='node then skip' status='skip'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then I see myFavoritePageTitle element</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='29' class='node then pass' status='pass'>
+		<li test-id='29' class='node then skip' status='skip'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then I compare 3rdFavoriteTitle text with temp variable text</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='30' class='node when pass' status='pass'>
+		<li test-id='30' class='node when skip' status='skip'>
 			
 			<b>When</b>
 			
 			<span class="bdd-step-name">When I click selectAllFavItem element</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='31' class='node and pass' status='pass'>
+		<li test-id='31' class='node and skip' status='skip'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And I click deleteSelectedFav element</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='32' class='node and pass' status='pass'>
+		<li test-id='32' class='node and skip' status='skip'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And I click confirmDeleteButton element</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='33' class='node then pass' status='pass'>
+		<li test-id='33' class='node then skip' status='skip'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then I see deleteConfirmationMessage element</span>
-				<div class='pre'>passed</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="./screenshots/2021-02-12 11.01.58.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>skipped</div>
 			
 		</li>
 	</ul>
@@ -511,13 +521,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Run</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
+							<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -532,9 +542,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 14, 2021 04:13:26 PM</td>
+										<td>Feb 12, 2021 10:59:57 AM</td>
 										<td class='linked' test-id='2'>Hepsiburada add and delete product my favorite.Hepsiburada search the samsung brand product with using search bar and add product my favorite</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -545,13 +555,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Chrome</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
+							<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -566,9 +576,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 14, 2021 04:13:26 PM</td>
+										<td>Feb 12, 2021 10:59:57 AM</td>
 										<td class='linked' test-id='2'>Hepsiburada add and delete product my favorite.Hepsiburada search the samsung brand product with using search bar and add product my favorite</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -587,6 +597,71 @@
 	</div>
 </div>
 <!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.AssertionError</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Feb 12, 2021 11:01:42 AM</td>
+                                                        <td class='linked' test-id='25'>Hepsiburada add and delete product my favorite.Hepsiburada search the samsung brand product with using search bar and add product my favorite.And I click 3rdProductFavIcon element</td>
+                                                        <td><pre><pre>java.lang.AssertionError: Element not found. Element is null
+	at org.testng.Assert.fail(Assert.java:94)
+	at Libs.WebStep.Click(WebStep.java:48)
+	at ✽.And I click 3rdProductFavIcon element(TestCase.feature:32)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -614,19 +689,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 14, 2021 04:13:25 PM</div>
+					<div class='panel-lead'>Feb 12, 2021 10:59:57 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 14, 2021 04:15:30 PM</div>
+			 		<div class='panel-lead'>Feb 12, 2021 11:01:59 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>124,626ms</div>
+					<div class='panel-lead'>122,219ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -675,20 +750,20 @@
 						</tr>
 						<tr>
 							<td>@Run</td>
+							<td>0</td>
 							<td>1</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 						<tr>
 							<td>@Chrome</td>
+							<td>0</td>
 							<td>1</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -704,31 +779,31 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 1,
-				failChild: 0,
+				passChild: 0,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 1,
 				
-				passGrandChild: 31,
-				failGrandChild: 0,
+				passGrandChild: 22,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 8,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 9,
 			};
 		</script>
 		

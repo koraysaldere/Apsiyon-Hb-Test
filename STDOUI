@@ -9,15 +9,6 @@ Feature: Hepsiburada add and delete product my favorite
     [32mWhen [0m[32mI login with[0m                                [90m# WebStep.login(DataTable)[0m
     [32mThen [0m[32mI see [0m[32m[1mmyAccount[0m[32m element[0m                     [90m# WebStep.seeElement(String)[0m
     [32mWhen [0m[32mI click [0m[32m[1mpopupClose[0m[32m element if exist[0m         [90m# WebStep.ClickElementExist(String)[0m
-    # !!! if exist ile biten stepler elementler eğer element display olmadı ise timeout süresince beklemektedir.
-    # testlerin koşması sırasında element ekrana hiç gelmedi ise timeout sürelerinden kaynaklı testlerin süresinin uzun olduğu düşünlebilir.
-    # burada öncelik testin doğru ve sağlıklı bir şekilde çalışması olduğundan senaryo performans kriterlerine göre dizayn edilmemiştir.
-    # Sepet Kontrolü
-    # !!! Test çalışması sırasında testin fail etmesi yarıda kesilmesi veya olumsuz bir durumla sonuçlanması durumnda ürün sepetten silinmeden çıkabilir.Scenario:
-    # Bir sonraki testin çalışması sırasında ürün favarilerden çıkarılmadığından aynı ürün eklenmek istendiğinde bu favarilerde ise test birkez daha fail edecektir.Scenario:
-    # Login işlemi gerçekleştirildikten sonra favorileri kontrol edip eğer ürün varsa silerek clean bir şekilde teste başlamak daha sağlıklı olduğundan bu admları Backgroundda her test çalışması sırasında kontrol ediyorum.
-    # Clean test mantığnı gözeterek çeşitli yöntemler kullanılabilir.
-    # Cashin temizlenmesi incongito modda tarayıcıyı başlatma vs. fakat otomasyon kütüphanesine uygunluğundan kaynaklı olarak bu yöntem ile ilerledim, diğer bahsettiğim yöntemler ve buna benzer bir çok yöntemde kullanılabilir.
     [32mWhen [0m[32mI mouse over [0m[32m[1mmyAccount[0m[32m element[0m              [90m# WebStep.MouseOver(String)[0m
     [32mAnd [0m[32mI click [0m[32m[1mmyFavorite[0m[32m element[0m                   [90m# WebStep.Click(String)[0m
     [32mThen [0m[32mI see [0m[32m[1mmyFavoritePageTitle[0m[32m element[0m           [90m# WebStep.seeElement(String)[0m
@@ -26,21 +17,27 @@ Feature: Hepsiburada add and delete product my favorite
     [32mAnd [0m[32mI click [0m[32m[1mconfirmDeleteButton[0m[32m element if exist[0m [90m# WebStep.ClickElementExist(String)[0m
     [32mWhen [0m[32mI click [0m[32m[1mHepsiburadaMainTitle[0m[32m element[0m        [90m# WebStep.Click(String)[0m
     [32mThen [0m[32mI url must be [0m[32m[1mhttps://www.hepsiburada.com/[0m  [90m# WebStep.CheckUrl(String)[0m
+[34mCurrent Page URL is https://www.hepsiburada.com/ara?q=samsung&sayfa=3[0m
 
   @Run @Chrome
-  Scenario: Hepsiburada search the samsung brand product with using search bar and add product my favorite [90m# TestCase.feature:35[0m
+  Scenario: Hepsiburada search the samsung brand product with using search bar and add product my favorite [90m# TestCase.feature:25[0m
     [32mWhen [0m[32mI write text [0m[32m[1msamsung[0m[32m text area [0m[32m[1msearchBar[0m                                                          [90m# WebStep.SendKeys(String,String)[0m
     [32mAnd [0m[32mI click [0m[32m[1msearchButton[0m[32m element[0m                                                                       [90m# WebStep.Click(String)[0m
     [32mWhen [0m[32mI click [0m[32m[1m3rdPage[0m[32m element[0m                                                                           [90m# WebStep.Click(String)[0m
     [32mThen [0m[32mI see [0m[32m[1msamsungPageTitle[0m[32m element[0m                                                                    [90m# WebStep.seeElement(String)[0m
     [32mAnd [0m[32mI get [0m[32m[1m3rdProductTitle[0m[32m element text and keep temp variable[0m                                          [90m# WebStep.getElementText(String)[0m
     [32mAnd [0m[32mI mouse over [0m[32m[1m3rdProduct[0m[32m element[0m                                                                    [90m# WebStep.MouseOver(String)[0m
-    [32mAnd [0m[32mI click [0m[32m[1m3rdProductFavIcon[0m[32m element[0m                                                                  [90m# WebStep.Click(String)[0m
-    [32mWhen [0m[32mI mouse over [0m[32m[1mmyAccount[0m[32m element[0m                                                                    [90m# WebStep.MouseOver(String)[0m
-    [32mAnd [0m[32mI click [0m[32m[1mmyFavorite[0m[32m element[0m                                                                         [90m# WebStep.Click(String)[0m
-    [32mThen [0m[32mI see [0m[32m[1mmyFavoritePageTitle[0m[32m element[0m                                                                 [90m# WebStep.seeElement(String)[0m
-    [32mThen [0m[32mI compare [0m[32m[1m3rdFavoriteTitle[0m[32m text with temp variable text[0m                                           [90m# WebStep.getElementTextCompareTemp(String)[0m
-    [32mWhen [0m[32mI click [0m[32m[1mselectAllFavItem[0m[32m element[0m                                                                  [90m# WebStep.Click(String)[0m
-    [32mAnd [0m[32mI click [0m[32m[1mdeleteSelectedFav[0m[32m element[0m                                                                  [90m# WebStep.Click(String)[0m
-    [32mAnd [0m[32mI click [0m[32m[1mconfirmDeleteButton[0m[32m element[0m                                                                [90m# WebStep.Click(String)[0m
-    [32mThen [0m[32mI see [0m[32m[1mdeleteConfirmationMessage[0m[32m element[0m                                                           [90m# WebStep.seeElement(String)[0m
+    [31mAnd [0m[31mI click [0m[31m[1m3rdProductFavIcon[0m[31m element[0m                                                                  [90m# WebStep.Click(String)[0m
+      [31mjava.lang.AssertionError: Element not found. Element is null
+      	at org.testng.Assert.fail(Assert.java:94)
+      	at Libs.WebStep.Click(WebStep.java:48)
+      	at ✽.And I click 3rdProductFavIcon element(TestCase.feature:32)
+      [0m
+    [36mWhen [0m[36mI mouse over [0m[36m[1mmyAccount[0m[36m element[0m                                                                    [90m# WebStep.MouseOver(String)[0m
+    [36mAnd [0m[36mI click [0m[36m[1mmyFavorite[0m[36m element[0m                                                                         [90m# WebStep.Click(String)[0m
+    [36mThen [0m[36mI see [0m[36m[1mmyFavoritePageTitle[0m[36m element[0m                                                                 [90m# WebStep.seeElement(String)[0m
+    [36mThen [0m[36mI compare [0m[36m[1m3rdFavoriteTitle[0m[36m text with temp variable text[0m                                           [90m# WebStep.getElementTextCompareTemp(String)[0m
+    [36mWhen [0m[36mI click [0m[36m[1mselectAllFavItem[0m[36m element[0m                                                                  [90m# WebStep.Click(String)[0m
+    [36mAnd [0m[36mI click [0m[36m[1mdeleteSelectedFav[0m[36m element[0m                                                                  [90m# WebStep.Click(String)[0m
+    [36mAnd [0m[36mI click [0m[36m[1mconfirmDeleteButton[0m[36m element[0m                                                                [90m# WebStep.Click(String)[0m
+    [36mThen [0m[36mI see [0m[36m[1mdeleteConfirmationMessage[0m[36m element[0m                                                           [90m# WebStep.seeElement(String)[0m

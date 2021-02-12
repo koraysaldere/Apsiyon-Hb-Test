@@ -12,16 +12,6 @@ Feature: Hepsiburada add and delete product my favorite
       | login               |          |
     Then  I see myAccount element
     When  I click popupClose element if exist
-    # !!! if exist ile biten stepler elementler eğer element display olmadı ise timeout süresince beklemektedir.
-    # testlerin koşması sırasında element ekrana hiç gelmedi ise timeout sürelerinden kaynaklı testlerin süresinin uzun olduğu düşünlebilir.
-    # burada öncelik testin doğru ve sağlıklı bir şekilde çalışması olduğundan senaryo performans kriterlerine göre dizayn edilmemiştir.
-
-    # Sepet Kontrolü
-    # !!! Test çalışması sırasında testin fail etmesi yarıda kesilmesi veya olumsuz bir durumla sonuçlanması durumnda ürün sepetten silinmeden çıkabilir.Scenario:
-    # Bir sonraki testin çalışması sırasında ürün favarilerden çıkarılmadığından aynı ürün eklenmek istendiğinde bu favarilerde ise test birkez daha fail edecektir.Scenario:
-    # Login işlemi gerçekleştirildikten sonra favorileri kontrol edip eğer ürün varsa silerek clean bir şekilde teste başlamak daha sağlıklı olduğundan bu admları Backgroundda her test çalışması sırasında kontrol ediyorum.
-    # Clean test mantığnı gözeterek çeşitli yöntemler kullanılabilir.
-    # Cashin temizlenmesi incongito modda tarayıcıyı başlatma vs. fakat otomasyon kütüphanesine uygunluğundan kaynaklı olarak bu yöntem ile ilerledim, diğer bahsettiğim yöntemler ve buna benzer bir çok yöntemde kullanılabilir.
     When  I mouse over myAccount element
     And   I click myFavorite element
     Then  I see myFavoritePageTitle element
@@ -48,6 +38,7 @@ Feature: Hepsiburada add and delete product my favorite
     And   I click deleteSelectedFav element
     And   I click confirmDeleteButton element
     Then  I see deleteConfirmationMessage element
+
 
 
 
